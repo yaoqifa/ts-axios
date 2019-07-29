@@ -84,12 +84,14 @@ import axios from '../../src/index'
 
 
 
-const arr = new Int32Array([21.32])
-axios({
-  method: 'post',
-  url: '/base/buffer',
-  data: arr
-})
+// const arr = new Int32Array([21.32])
+// axios({
+//   method: 'post',
+//   url: '/base/buffer',
+//   data: arr
+// })
+
+
 
 axios({
   method: 'post',
@@ -100,29 +102,28 @@ axios({
   }
 })
 
+axios({
+  method: 'post',
+  url: '/base/post',
+  headers: {
+    'content-type': 'application/json',
+    'Accept': 'application/json, text/plain, */*'
+  },
+  data: {
+    a: 1,
+    b: 2,
+    c: 3
+  }
+})
 
+const paramsString = 'a=URLUtils.searchParams'
+const searchParams = new URLSearchParams(paramsString)
 
-// axios({
-//   method: 'post',
-//   url: '/base/post',
-//   headers: {
-//     'content-type': 'application/json',
-//     'Accept': 'application/json, text/plain, */*'
-//   },
-//   data: {
-//     a: 1,
-//     b: 2
-//   }
-// })
-
-// const paramsString = 'q=URLUtils.searchParams&topic=api'
-// const searchParams = new URLSearchParams(paramsString)
-//
-// axios({
-//   method: 'post',
-//   url: '/base/post',
-//   data: searchParams
-// })
+axios({
+  method: 'post',
+  url: '/base/post',
+  data: searchParams
+})
 
 
 // axios({
