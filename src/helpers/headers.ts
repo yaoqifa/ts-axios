@@ -20,7 +20,7 @@ export function processHeaders(headers: any, data: any): any {
       headers[contentType] = 'application/json;charset=utf-8'
     }
   }
-  return headers
+  return headers || {}
 }
 
 export function parseHeaders(headers: string): any {

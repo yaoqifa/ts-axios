@@ -17,7 +17,7 @@ function processConfig(config: AxiosRequestConfig): void {
 
 function transformUrl(config: AxiosRequestConfig): string {
   const { url, params } = config
-  return buildURL(url, params)
+  return buildURL(url,  params)
 }
 
 function transformRequestData(config: AxiosRequestConfig): string {
@@ -26,7 +26,7 @@ function transformRequestData(config: AxiosRequestConfig): string {
 
 function transformHeaders(config: AxiosRequestConfig): any {
   const { headers, data } = config
-  return processHeaders(Headers, data)
+  return processHeaders(headers, data)
 }
 
 function transformResponseData(res: AxiosResponse): AxiosResponse {
