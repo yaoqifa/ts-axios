@@ -116,7 +116,7 @@ axios({
   }
 })
 
-const paramsString = 'a=URLUtils.searchParams'
+const paramsString = 'a=URLUtils.searchParams&topic=api'
 const searchParams = new URLSearchParams(paramsString)
 
 axios({
