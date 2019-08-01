@@ -25,6 +25,6 @@ export interface AxiosError extends Error {
   isAxiosError: boolean
   config: AxiosRequestConfig
   code?: string | null
-  response?: AxiosResponse
   request?: any
+  response?: AxiosResponse
 }
