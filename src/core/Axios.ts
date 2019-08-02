@@ -13,6 +13,14 @@ export default class Axios {
     return this._requestMethodWithoutData('delete', url, config)
   }
 
+  options(url: string, config?: AxiosRequestConfig): AxiosPromise {
+    return this._requestMethodWithoutData('get', url, config)
+  }
+
+  head(url: string, config?: AxiosRequestConfig): AxiosPromise {
+    return this._requestMethodWithoutData('delete', url, config)
+  }
+
   post(url: string, data?: any, config?: AxiosRequestConfig): AxiosPromise {
     return this._requestMethodWithData('delete', url, data, config)
   }
