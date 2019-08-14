@@ -30,10 +30,13 @@ export interface AxiosError extends Error {
 }
 
 export interface Axios {
+  defaults: AxiosRequestConfig
+
   interceptors: {
-  request: AxiosInterceptorManeger<AxiosRequestConfig>
-  response: AxiosInterceptorManeger<AxiosResponse>
-}
+    request: AxiosInterceptorManeger<AxiosRequestConfig>
+    response: AxiosInterceptorManeger<AxiosResponse>
+  }
+
   request<T = any>(config: AxiosRequestConfig): AxiosPromise<T>
   get<T = any>(url: string, config?:AxiosRequestConfig): AxiosPromise<T>
   delete<T = any>(url: string, config?: AxiosRequestConfig): AxiosPromise<T>
